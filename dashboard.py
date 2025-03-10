@@ -7,7 +7,10 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Load model and scaler
-model = joblib.load("model/health_risk_model.pkl")
+import os
+model_path = os.path.join(os.getcwd(), "model", "health_risk_model.pkl")
+model = joblib.load(model_path)
+
 scaler = joblib.load("model/scaler.pkl")
 
 # Function to calculate BMI
